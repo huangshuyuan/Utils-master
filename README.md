@@ -19,7 +19,9 @@ https://github.com/drakeet/MultiType
 
 https://drakeet.me/
 
-5.
+5.viewpager切换动画封装
+6.swipeRefreshLayout各种使用（封装）
+
 
 
 
