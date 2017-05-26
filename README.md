@@ -4,7 +4,8 @@
 
 ![](https://github.com/huangshuyuan/UtilsDemo/blob/master/1.png)
 ![](https://github.com/huangshuyuan/UtilsDemo/blob/master/2.png)
-
+![](https://github.com/huangshuyuan/UtilsDemo/blob/master/3.png)
+![](https://github.com/huangshuyuan/UtilsDemo/blob/master/4.png)
 
 # 包含以下：
 
@@ -28,7 +29,9 @@ https://drakeet.me/
 
 6、swipeRefreshLayout各种使用（封装）
 
+7、缓存清理
 
+8、对话框（https://github.com/afollestad/material-dialogs）
 
 
 ## 参考：
