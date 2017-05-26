@@ -17,7 +17,8 @@
     <string name="string_tv_top_bar_back">返回</string>
     <string name="string_tv_setting">WebView页面</string>
 
-
+    <string name="mine_cache_clear">缓存清理</string>
+    <string name="cache_clear_success">清理成功</string>
     <string name="image_transition">image_trans_name</string>
     <string name="s">
 　　全屏模式是DirectDraw的最常用方式，各种用DX开发的商业游戏大都采用全屏模式。

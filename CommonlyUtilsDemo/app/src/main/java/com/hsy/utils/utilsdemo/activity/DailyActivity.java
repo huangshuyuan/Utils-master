@@ -130,7 +130,7 @@ public class DailyActivity extends BaseActivity {
     }
 
     public static void start(Activity activity, View v, String title, String date, String imageUrl) {
-        //添加动画
+        //添加切换动画，MD风格的
         ActivityOptionsCompat compat = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 activity,
                 v,

@@ -9,7 +9,7 @@
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:windowAnimationStyle">@style/activityAnimation</item>
     </style>
-    <!--支持动画-->
+    <!--所有Activity动画-支持动画-->
     <style name="activityAnimation" parent="@android:style/Animation">
         <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
         <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>

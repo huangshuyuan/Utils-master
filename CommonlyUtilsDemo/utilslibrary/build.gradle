@@ -51,4 +51,6 @@ dependencies {
     // If you want to use the GPU Filters
     /*图片工具类*/
 /*https://github.com/wasabeef/glide-transformations*/
+
+    compile 'com.afollestad.material-dialogs:core:0.8.5.9'
 }
