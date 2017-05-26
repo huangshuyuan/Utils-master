@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UtilsLibrary</string>
+    <string name="refresh_text">加载更多</string>
+</resources>

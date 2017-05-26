@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#198cb2</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">#24b0b0</color>
+    <color name="transport">#00000000</color>
+    <color name="black_overlay">#66000000</color>
+    <!--下拉颜色，进度条-->
+    <color name="color_bule">#2F9BFF</color>
+    <color name="color_bule2">#40B3F0</color>
+    <color name="color_bule3">#99ddff</color>
+    <color name="transparent">#00000000</color>
+
+
+    <!--下拉颜色，进度条-->
+    <color name="color_w1">#ffffff</color>
+    <color name="color_w2">#ece86b</color>
+    <color name="color_w3">#c9daf8</color>
+
+    <!--标题颜色-->
+    <color name="middle_red">#e7abff</color>
+    <color name="white">#ffffff</color>
+</resources>

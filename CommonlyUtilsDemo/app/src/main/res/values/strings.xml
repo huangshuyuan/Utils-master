@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">工具</string>
+    <string name="action_settings">设置</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_scrolling">首页</string>
+    <string name="title_activity_buttom">ButtomActivity</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">板块</string>
+    <string name="title_notifications">消息</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+
+    <!--上拉刷新提示文字-->
+    <string name="refresh_text">   正在玩命加载中....</string>
+
+    <!--recycle-->
+    <string name="string_tv_top_bar_back">返回</string>
+    <string name="string_tv_setting">WebView页面</string>
+
+
+    <string name="image_transition">image_trans_name</string>
+    <string name="s">
+　　全屏模式是DirectDraw的最常用方式，各种用DX开发的商业游戏大都采用全屏模式。
+
+　　全屏模式下，你的(游戏)应用程序界面占据了整个屏幕空间，而且你几乎拥有了全部的控制计算机进行绘图的功能，而对应地，窗口模式只占据屏幕的一部分，二者区别的一个很重要之处就是：全屏模式下你可以设定屏幕的分辨率(屏幕的显示大小，单位：像素)和色深，上面谈到的分辨率其实就是Windows的分辨率，通过右击桌面查看其显示属性可以获取它们，如：
+
+　　320 x 240
+　　640 x 480
+　　800 x 600
+　　1024 x 76
+
+　　当然还不只这些,有些显卡支持60种以上的显示模式，显示模式=屏幕大小+色深的组合，色深定义了任一时刻可以(通过编程手段)显示在屏幕上的最大的色彩总数，它们遵循以下简单的规则：
+
+　　色深数越高 = 程序运行速度越慢 + 视觉效果越好；
+　　色深数越低 = 程序运行得越快 + 视觉效果越差；
+
+　　记住这个对你编程时为你的程序选择哪种显示方案很有用，如果你的游戏不打算使用高精度的画面就不要设置过高的色深，因为这会使游戏的运行速度打折扣，下面列出了编程时可能使用到的四种色深：
+
+　　8 bit - 256色
+　　16 bit - 65536色
+　　24 bit - 16百万色 *
+　　32 bit - 16.7百万色 *(*表示相对占用较多的系统资源)
+
+　　24位显示模式与32位真彩色显示模式之间的差别其实很小，做一些关于它们之间效果比较的实验，或许你可以发现这种差别。
+
+绘图页：
+　　这是你有能力开始写代码任何实际的代码之前要明白的最后一件事情，DDraw使用一种叫"绘图页"的机制来承载图片信息，其实绘图页实际表示内存中某块特定的(图片数据)存储区，为便于理解，你可以把绘图页通俗地想象成内存中的一张白纸，向这张白纸上作贴图操作后绘图页中便有了这个图片的所有数据，这个绘图页便代表了这个图片，因此每个绘图页可以是不同的大小，绘图页可以通过加载硬盘里的某一张图片来填冲，也可以在系统后缓冲区由几张图片拼接形成，通过下面的学习，你将会对它们有一个更清的认识，但是到现在为止，你只要弄清主绘图页和后缓冲区绘图页的概念就行了，存储在主绘图页的任何内容都是屏幕当前实际显示的内容，在DX的全屏模式下，主绘图页的大小与屏幕大小等同，后缓冲区绘图页就是被设置成下一帧(或下一屏)要显示的页面内容，但是它在没有被设置成主绘图页之前，仅仅存在系统缓冲区内。
+
+　　DX中引入后缓冲区绘图页可以防止屏幕闪烁，怎么理解呢？直接向主绘页图页贴图固然行得通，但当不断地向一个主绘图页贴大量的图片时(用静图制作动画效果时)，或者当主绘图页由大量的小图组合而成的情况下直接在主绘图页上作拼接操作(主绘图页可能是由各种Tiles拼接起来的地图背景)，由于主绘图页的内容会即时地显示在屏幕上，这二种情况下，屏幕的显示就会出现闪烁或延迟，而后缓冲区绘图页就解决了这个问题，首先这些小图可以先在内存中组合成一张大图贴在后缓冲区绘图页里，再把这个后缓冲区绘图页设置成主绘图页(术语称把后缓冲区绘图页拷贝到主绘图页，在程序中是调用一些页面复制函数来实现的，后面会讲到)，这样就不会出现闪烁问题了。</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_detial_list">Items</string>
+    <string name="title_detial_detail">Detial Detail</string>
+    <string name="title_activity_left">LeftActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
