@@ -1,25 +1,40 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.hsy.utils.utilsdemo.activity.PagerActivity$PlaceholderFragment">
+ >
 
-    <LinearLayout
+
+
+
+    <com.hsy.utils.utilslibrary.view.MultiSwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:id="@+id/mine_cache_clear"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
             android:layout_width="match_parent"
-            android:gravity="center"
-            android:padding="10dp"
-            android:layout_height="wrap_content"
-            android:text="@string/mine_cache_clear" />
-    </LinearLayout>
+            android:layout_height="match_parent">
 
+        </android.support.v7.widget.RecyclerView>
+    </com.hsy.utils.utilslibrary.view.MultiSwipeRefreshLayout>
 
-</RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#ffffff"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="#9a9ea1"
+        app:srcCompat="@drawable/top" />
+    <!--  app:elevation="6dp"//显示的阴影大小
+          app:pressedTranslationZ="12dp"//点击时的阴影大小-->
+
+</android.support.design.widget.CoordinatorLayout>

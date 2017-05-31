@@ -3,6 +3,7 @@ package com.hsy.utils.utilsdemo.activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,10 +13,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.hsy.utils.utilsdemo.R;
+import com.hsy.utils.utilsdemo.utils.AppUtils;
+import com.hsy.utils.utilslibrary.SettingCenter;
 import com.hsy.utils.utilslibrary.activity.BaseActivity;
+import com.hsy.utils.utilslibrary.utils.SpannableStringUtils;
+import com.hsy.utils.utilslibrary.utils.ToastUtils;
 
+//缓存
 public class LeftActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -23,6 +30,8 @@ public class LeftActivity extends BaseActivity
     protected int setLayoutResourceID() {
         return R.layout.activity_left;
     }
+
+    TextView mine_cache_clear;
 
     @Override
     protected void setUpView() {
@@ -46,6 +55,35 @@ public class LeftActivity extends BaseActivity
 
         NavigationView navigationView = (NavigationView) $(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        mine_cache_clear = (TextView) $(R.id.mine_cache_clear);
+        refresh();
+        mine_cache_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUtils.clearCache(LeftActivity.this, new SettingCenter.ClearCacheListener() {
+                    @Override
+                    public void onResult() {
+                        ToastUtils.getInstance().showToast(getString(R.string.cache_clear_success));
+                        mine_cache_clear.setText(getString(R.string.mine_cache_clear));
+                    }
+                });
+            }
+        });
+    }
+
+    public void refresh() {
+        SettingCenter.countDirSizeTask(new SettingCenter.CountDirSizeListener() {
+            @Override
+            public void onResult(long result) {
+                SpannableStringBuilder builder = new SpannableStringBuilder();
+                builder.append(getString(R.string.mine_cache_clear));
+                builder.append("\n");
+                builder.append(SpannableStringUtils.format(LeftActivity.this, "(" + SettingCenter.formatFileSize(result) + ")", R.style.ByTextAppearance));
+                mine_cache_clear.setText(builder);
+            }
+        });
     }
 
     @Override

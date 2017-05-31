@@ -20,4 +20,8 @@
     <!--标题颜色-->
     <color name="middle_red">#e7abff</color>
     <color name="white">#ffffff</color>
+
+    <color name="refresh_progress_1">#e91e63</color>
+    <color name="refresh_progress_2">#00b0ff</color>
+    <color name="refresh_progress_3">@color/colorPrimary</color>
 </resources>
