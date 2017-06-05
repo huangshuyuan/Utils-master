@@ -54,3 +54,4 @@ dependencies {
 
     compile 'com.afollestad.material-dialogs:core:0.8.5.9'
 }
+apply from: "maven.gradle"
